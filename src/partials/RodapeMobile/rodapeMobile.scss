@@ -1,0 +1,50 @@
+@use "../../styles/colors.scss" as *;
+
+/* ---------------------- Rodape Mobile ------------------ */
+.rodape-mobile {
+  width: 100%;
+  color: #ffffff;
+  // background: $color-purple-2;
+  height: auto;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(223, 223, 223, 0.588);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 5px 20px 2px #303b41b8;
+  // box-shadow: 0px 10px 10px 6px #1a1a1a;
+  bottom: 0;
+  padding: 5px 0;
+  z-index: 5;
+
+  .icones-rodape {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      margin: 5px 20px;
+    }
+
+    .icone {
+      border-radius: 55px;
+      color: white;
+      font-size: 23px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .phone {
+      background: #558ada;
+    }
+
+    .envelope {
+      background: #f00;
+    }
+
+    .whatsapp {
+      background-color: #49ca59;
+    }
+  }
+}

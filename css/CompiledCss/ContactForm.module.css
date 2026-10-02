@@ -1,0 +1,189 @@
+.contatoForm {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 20px;
+  font-family: var(--font-open-sans);
+}
+@media (max-width: 840px) {
+  .contatoForm {
+    width: 100%;
+  }
+}
+.contatoForm .boxInput {
+  display: flex;
+  gap: 10px;
+}
+.contatoForm .inputForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+@media (max-width: 840px) {
+  .contatoForm .inputForm {
+    width: 100%;
+  }
+}
+.contatoForm .inputForm label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 0;
+}
+@media (max-width: 840px) {
+  .contatoForm .inputForm label {
+    font-size: 0.8rem;
+  }
+}
+.contatoForm .inputForm input,
+.contatoForm .inputForm select,
+.contatoForm .inputForm textarea {
+  padding: 10px 20px;
+  border: 1px solid #afafaf;
+  border-radius: 5px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+@media (max-width: 400px) {
+  .contatoForm .inputForm input,
+  .contatoForm .inputForm select,
+  .contatoForm .inputForm textarea {
+    font-size: 0.8rem;
+  }
+}
+.contatoForm .inputForm input:focus,
+.contatoForm .inputForm select:focus,
+.contatoForm .inputForm textarea:focus {
+  outline: none;
+  border: 1px solid #747474;
+  transition: all 0.3s ease;
+}
+.contatoForm .inputForm select {
+  padding: 6.5px 15px;
+}
+.contatoForm .inputForm textarea {
+  width: 100%;
+  height: 150px;
+  max-height: 150px;
+  resize: none;
+}
+.contatoForm .btnSubmit {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  background-color: #4a2fe0;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contatoForm .btnSubmit:hover {
+  background-color: #6a46fc;
+  transition: all 0.3s ease;
+  color: #f4eef6;
+}
+
+.formSuccess {
+  color: #949494;
+  font-size: 0.9em;
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 500;
+}
+
+.contatoFormIncluded {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 20px;
+  font-family: var(--font-open-sans);
+}
+@media (max-width: 840px) {
+  .contatoFormIncluded {
+    width: 100%;
+  }
+}
+.contatoFormIncluded .boxInput {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 530px) {
+  .contatoFormIncluded .boxInput {
+    flex-direction: column;
+  }
+}
+.contatoFormIncluded .inputForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+@media (max-width: 840px) {
+  .contatoFormIncluded .inputForm {
+    width: 100%;
+  }
+}
+.contatoFormIncluded .inputForm label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 0;
+}
+@media (max-width: 840px) {
+  .contatoFormIncluded .inputForm label {
+    font-size: 1rem;
+  }
+}
+.contatoFormIncluded .inputForm input,
+.contatoFormIncluded .inputForm select,
+.contatoFormIncluded .inputForm textarea {
+  padding: 10px 20px;
+  border: 1px solid #afafaf;
+  border-radius: 5px;
+  width: 100%;
+  transition: all 0.3s ease;
+  background-color: rgb(238, 238, 238);
+}
+@media (max-width: 400px) {
+  .contatoFormIncluded .inputForm input,
+  .contatoFormIncluded .inputForm select,
+  .contatoFormIncluded .inputForm textarea {
+    font-size: 0.9rem;
+  }
+}
+.contatoFormIncluded .inputForm input:focus,
+.contatoFormIncluded .inputForm select:focus,
+.contatoFormIncluded .inputForm textarea:focus {
+  outline: none;
+  border: 1px solid #747474;
+  transition: all 0.3s ease;
+}
+.contatoFormIncluded .inputForm select {
+  padding: 6.5px 15px;
+}
+.contatoFormIncluded .inputForm textarea {
+  width: 100%;
+  height: 150px;
+  max-height: 150px;
+  resize: none;
+}
+.contatoFormIncluded .btnSubmit {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  background-color: #4a2fe0;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contatoFormIncluded .btnSubmit:hover {
+  background-color: #6a46fc;
+  transition: all 0.3s ease;
+  color: #f4eef6;
+}

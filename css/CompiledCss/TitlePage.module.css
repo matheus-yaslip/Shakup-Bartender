@@ -1,0 +1,33 @@
+.titlePage {
+  padding: 200px 0 80px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  background: #8517cf;
+  background: linear-gradient(168deg, rgb(133, 23, 207) 0%, rgb(106, 70, 252) 93%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#8517CF", endColorstr="#6A46FC", GradientType=0 );
+  background-size: cover;
+}
+@media (max-width: 600px) {
+  .titlePage {
+    padding: 140px 0 45px;
+  }
+}
+.titlePage h1 {
+  font-family: var(--font-josefin);
+  font-size: 3em;
+  padding: 0px 10px;
+}
+@media (max-width: 1024px) {
+  .titlePage h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+@media (max-width: 490px) {
+  .titlePage h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}

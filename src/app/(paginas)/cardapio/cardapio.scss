@@ -1,0 +1,533 @@
+/* =========================================================
+   CARDÁPIO INTERATIVO
+========================================================= */
+
+.page-hero {
+  padding: 24vh 7vw 10vh;
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  h1 {
+    font-size: 6rem;
+    color: #fff
+  }
+
+  @media(max-width:700px){
+    padding: 20vh 7vw 10vh;
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+
+.page-hero .eyebrow {
+  margin-bottom: auto
+  
+}
+
+
+.page-hero-note,
+.page-hero>p {
+  max-width: 520px;
+  align-self: flex-end;
+  line-height: 1.6;
+  color: var(--accent);
+  margin-top: 40px
+}
+
+.editorial-hero {
+  background: #a93a27;
+}
+
+
+.interactive-menu {
+  background: #171211;
+  color: #d9d7d0;
+}
+
+
+.menu-hero {
+  background: #a93a27;
+  color: #fff
+}
+
+.menu-hero .eyebrow,
+.menu-hero>p {
+ color: var(--accent);
+}
+
+.menu-hero h1 em {
+  color: var(--accent);
+  font-size: 5rem;
+
+  @media(max-width:700px){
+    font-size: 4rem;
+
+  }
+}
+
+
+/* =========================================================
+   CADA CARDÁPIO
+========================================================= */
+
+.cocktail-menu {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: #171211;
+}
+
+
+/* =========================================================
+   LADO ESQUERDO
+========================================================= */
+
+.cocktail-menu__content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+
+  padding:
+    clamp(55px, 6vw, 100px) clamp(30px, 4vw, 75px) clamp(35px, 4vw, 60px);
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.cocktail-menu__heading {
+  max-width: 700px;
+}
+
+.cocktail-menu__number {
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-size: 10px;
+  letter-spacing: 0.18em;
+
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.cocktail-menu__tag {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 10px;
+  letter-spacing: 0.22em;
+
+  color: var(--accent);
+}
+
+.cocktail-menu__heading h2 {
+  margin: 0;
+
+  font-family: var(--display);
+  font-size: clamp(4.5rem, 7vw, 8rem);
+  font-weight: 400;
+  line-height: 0.88;
+
+  color: #d2d0c8;
+}
+
+.cocktail-menu__heading>p {
+  max-width: 560px;
+
+  margin: 28px 0 0;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================================================
+   NOME + INGREDIENTES
+========================================================= */
+
+.cocktail-menu__drink-info {
+  margin-top: auto;
+  padding-top: 60px;
+
+  animation: cocktailTextIn 0.55s cubic-bezier(.2, .7, .2, 1);
+}
+
+.cocktail-menu__drink-info h3 {
+  margin: 0 0 14px;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  color: #c9c7c0;
+}
+
+.cocktail-menu__drink-info ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 180px));
+
+  column-gap: 35px;
+  row-gap: 7px;
+
+  max-width: 430px;
+
+  margin: 0;
+  padding-left: 16px;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.cocktail-menu__drink-info li {
+  padding-left: 3px;
+
+  font-family: var(--display);
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+
+/* =========================================================
+   MINIATURAS
+========================================================= */
+
+.cocktail-menu__thumbs {
+  display: flex;
+  align-items: flex-end;
+
+  gap: 14px;
+
+  margin-top: 42px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding: 2px 2px 8px;
+
+  scrollbar-width: none;
+}
+
+.cocktail-menu__thumbs::-webkit-scrollbar {
+  display: none;
+}
+
+.cocktail-thumb {
+  position: relative;
+
+  flex: 0 0 clamp(72px, 6.3vw, 105px);
+
+  width: clamp(72px, 6.3vw, 105px);
+  height: clamp(105px, 9vw, 145px);
+
+  padding: 0;
+
+  border: 1px solid transparent;
+
+  background: #211b1a;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  opacity: 0.58;
+
+  transform: translateY(0);
+
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s cubic-bezier(.2, .7, .2, 1),
+    border-color 0.4s ease;
+}
+
+.cocktail-thumb img {
+  object-fit: cover;
+
+  transition:
+    transform 0.65s cubic-bezier(.2, .7, .2, 1),
+    filter 0.45s ease;
+}
+
+.cocktail-thumb:hover {
+  opacity: 0.9;
+  transform: translateY(-5px);
+}
+
+.cocktail-thumb:hover img {
+  transform: scale(1.04);
+}
+
+.cocktail-thumb.is-active {
+  opacity: 1;
+
+  border-color: rgba(225, 222, 212, 0.85);
+
+  transform: translateY(-8px);
+}
+
+.cocktail-thumb.is-active img {
+  transform: scale(1.03);
+}
+
+
+/* =========================================================
+   IMAGEM GRANDE
+========================================================= */
+
+.cocktail-menu__visual {
+  position: relative;
+
+  min-width: 0;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #0d0c0b;
+}
+
+.cocktail-menu__visual::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(90deg,
+      rgba(23, 18, 17, 0.18) 0%,
+      transparent 20%);
+}
+
+.cocktail-menu__image {
+  position: absolute;
+  inset: 0;
+
+  animation: cocktailImageIn 0.75s cubic-bezier(.2, .7, .2, 1);
+}
+
+.cocktail-menu__image img {
+  object-fit: cover;
+  object-position: center;
+
+  transform: scale(1.01);
+
+  transition:
+    transform 1.2s cubic-bezier(.2, .7, .2, 1),
+    filter 0.8s ease;
+}
+
+.cocktail-menu:hover .cocktail-menu__image img {
+  transform: scale(1.025);
+}
+
+
+/* =========================================================
+   ANIMAÇÕES
+========================================================= */
+
+@keyframes cocktailImageIn {
+  from {
+    opacity: 0;
+    transform: scale(1.025);
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes cocktailTextIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .cocktail-menu {
+    grid-template-columns: 48% 52%;
+  }
+
+  .cocktail-menu__content {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .cocktail-menu__heading h2 {
+    font-size: clamp(4rem, 8vw, 6rem);
+  }
+
+  .cocktail-menu__drink-info ul {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .cocktail-thumb {
+    flex-basis: 74px;
+    width: 74px;
+    height: 105px;
+  }
+}
+
+
+@media (max-width: 760px) {
+
+  .cocktail-menu {
+    display: flex;
+    flex-direction: column;
+
+    min-height: auto;
+  }
+
+  /* CONTEÚDO PRIMEIRO */
+  .cocktail-menu__content {
+    order: 1;
+
+    width: 100%;
+    min-height: auto;
+
+    padding:
+      45px 20px 35px;
+  }
+
+  /* FOTO DEPOIS */
+  .cocktail-menu__visual {
+    order: 2;
+
+    width: 100%;
+    min-height: 0;
+    height: 65svh;
+  }
+
+  .cocktail-menu__heading h2 {
+    font-size: clamp(4.2rem, 22vw, 7rem);
+  }
+
+  .cocktail-menu__heading > p {
+    margin-top: 22px;
+    font-size: 13px;
+  }
+
+  .cocktail-menu__drink-info {
+    margin-top: 45px;
+    padding-top: 0;
+  }
+
+  .cocktail-menu__drink-info h3 {
+    font-size: 20px;
+  }
+
+  .cocktail-menu__drink-info ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    max-width: none;
+
+    column-gap: 25px;
+    row-gap: 7px;
+  }
+
+  .cocktail-menu__thumbs {
+    width: calc(100% + 20px);
+
+    margin-top: 35px;
+    margin-right: -20px;
+
+    padding-right: 20px;
+
+    scroll-snap-type: x proximity;
+  }
+
+  .cocktail-thumb {
+    flex: 0 0 82px;
+
+    width: 82px;
+    height: 118px;
+
+    scroll-snap-align: start;
+  }
+
+  .cocktail-thumb:hover {
+    transform: none;
+  }
+
+  .cocktail-thumb.is-active {
+    transform: translateY(-4px);
+  }
+}
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .cocktail-menu__visual {
+    height: 58svh;
+  }
+
+  .cocktail-menu__content {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .cocktail-menu__heading h2 {
+    font-size: clamp(3.8rem, 22vw, 5.5rem);
+  }
+
+  .cocktail-menu__drink-info ul {
+    grid-template-columns: 1fr;
+  }
+
+  .cocktail-thumb {
+    flex-basis: 72px;
+
+    width: 72px;
+    height: 105px;
+  }
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .cocktail-menu__image,
+  .cocktail-menu__drink-info {
+    animation: none;
+  }
+
+  .cocktail-thumb,
+  .cocktail-thumb img,
+  .cocktail-menu__image img {
+    transition: none;
+  }
+}
