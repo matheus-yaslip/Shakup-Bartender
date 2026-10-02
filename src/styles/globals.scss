@@ -1,3 +1,9 @@
+@use "../partials/Rodape/rodape";
+@use "../partials/Topo/topo";
+@use "../app/(paginas)/cardapio/cardapio";
+@use "../styles/index";
+
+
 :root {
   --ink: #10100f;
   --paper: #f0ede5;
@@ -7,12 +13,6 @@
   --display: var(--font-frank-text), Georgia, serif;
   --sans: var(--font-poppins), Arial, sans-serif;
 }
-
-@use "../partials/Rodape/rodape";
-@use "../partials/Topo/topo";
-@use "../app/(paginas)/cardapio/cardapio";
-@use "../styles/index";
-
 
 
 * {
